@@ -1,0 +1,14 @@
+p{
+ color: aqua
+}
+
+li{
+    color: yellow;
+    font: bold;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}

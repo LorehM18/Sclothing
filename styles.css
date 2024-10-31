@@ -1,0 +1,253 @@
+
+body{
+    margin: 0;
+}
+ul{
+    list-style-type: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_uno li{
+    float: left;
+    width: 10em;
+    text-decoration: none;
+   
+}
+
+.nav_dos li{
+    float: left;
+   
+    width: 10em;
+    text-decoration: none;
+    align-items: center;
+   
+}
+
+.nav_dos a{
+    
+    color: black;
+    align-items: center;
+    
+}
+
+input{
+    width: 130px;
+}
+
+.carrusel{
+    height: 400px;
+    overflow: hidden;
+    
+    text-align: center;
+    position: relative;
+   
+}
+.container{
+   
+    border: 0;
+    padding: 0%;
+    position: relative;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    height: 400px;
+    width: 20%;
+    align-items: center;
+}
+
+.flechas2,.flechas1,.flechas3{
+    font-size: 2em;
+    position: absolute;   
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+   
+}
+
+.aviso1{
+    text-align: center;
+    font-size: 24px;
+    margin: 40px;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.container2 img{
+    height: 100%;
+    
+} 
+.container_link{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_link a{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(155, 61, 61);
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la visibilidad del texto */
+    /*padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+   
+}*/
+
+.container_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/sweater1.jpeg);
+    background-size: cover;
+    background-position:center ;
+    width: 20%;
+    height: 300px;
+    padding-top: 50px;
+    
+    
+}
+
+.container_link a{
+    color: #fff;
+}
+
+
+.container_link2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/sweater2.jpg);
+    background-size: cover;
+    background-position:center ;
+    width: 20%;
+    height: 300px;
+    padding-top: 50px;
+    
+    
+}
+
+.container_link2 a{
+    color: #fff;
+}
+
+.container_link3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/ofertas.jpg);
+    background-size: cover;
+    background-position:center ;
+    width: 20%;
+    height: 300px;
+    padding-top: 50px;
+    
+    
+}
+
+.container_link3 a{
+    color: #fff;
+}
+
+.conte_foot1{
+    text-align: center;
+}
+
+.conte_foot2{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.seccion_m{
+    display: flex;    
+}
+
+.div_filtro{
+    width: 20%;
+}
+
+.div_img{
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.div_img img{
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    justify-content: center;
+}
+
+.div_item{
+    width: calc(33.333% - 10px);
+    box-sizing: border-box ;
+    text-align: center;
+    border: 1px solid #141414; 
+}
+
+/* INICIO DE SESION*/
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px;
+    
+}
+
+/* registro*/
+
+.d-flex{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.form-outline {
+    flex: 10; /* Permite que cada input ocupe el mismo espacio */
+    justify-content: center;
+}
+
+.col-md-10{
+    justify-content: center;
+}
+
+.mx-1{
+    max-width: 500px; 
+    width: 100%; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+}
+
