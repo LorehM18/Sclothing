@@ -14,29 +14,32 @@ header{
 
 .nav_uno li{
     float: left;
-    width: 10em;
+    width: 7em;
     text-decoration: none;
    
 }
 
-.nav_dos li{
-    float: left;
-   
-    width: 10em;
-    text-decoration: none;
+.nav_dos {
+    display: flex;
     align-items: center;
+}
+
+.nav_dos li{
+    list-style: none;
+    margin-right: 1em;
    
 }
 
 .nav_dos a{
     
     color: black;
-    align-items: center;
+    text-decoration: none;
     
 }
 
-input{
-    width: 130px;
+.input_nav2{
+    width: 90px;    
+    margin-right: 1em;
 }
 
 .carrusel{

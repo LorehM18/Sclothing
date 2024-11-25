@@ -1,3 +1,6 @@
+<?php
+session_start(); // Iniciar la sesión
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,16 +18,23 @@
         <nav class="nav_uno">
             <ul>
                 <li>SCLOTHING</li>
-                <li><a href="./mujer.html">MUJER</a></li>
+                <li><a href="./mujer.php">MUJER</a></li>
                 <li>HOMBRE</li>
                 <li>OFERTAS</li>
             </ul>
         </nav>
         <nav class="nav_dos">
             <ul>
-                <li><input type="text" placeholder="Buscar"></li>
-                <li><a href="./inicio_sesion.html">Iniciar sesión</a></li>
+                <li><input type="text" placeholder="Buscar" class="input_nav2"></li>
+                <!--<li><a href="./inicio_sesion.php">Iniciar sesión</a></li>-->
                 <li><a href="#">Carrito</a></li>
+                <?php if (isset($_SESSION['username'])): ?>
+                <li>Bienvenido, <?php echo htmlspecialchars($_SESSION['username']); ?>!</li>
+                <li><a href="cerrar_sesion.php">Cerrar sesión</a></li>
+            <?php else: ?>
+                <li><a href="./inicio_sesion.php">Iniciar sesión</a></li>
+                <li><a href="./registro.php">Registrarse</a></li>
+            <?php endif; ?>
             </ul>
         </nav>
 
