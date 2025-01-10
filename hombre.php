@@ -1,6 +1,5 @@
 <?php
 session_start(); // Iniciar la sesión
-include 'conexionProducto.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +26,7 @@ include 'conexionProducto.php';
         <nav class="nav_dos">
             <ul>
                 <li><input type="text" placeholder="Buscar"></li>                
-                <li><a href="carrito.php">Carrito</a></li>
+                <li><a href="#">Carrito</a></li>
                 <?php if (isset($_SESSION['username'])): ?>
                 <li>Bienvenido, <?php echo htmlspecialchars($_SESSION['username']); ?>!</li>
                 <li><a href="index.php">Cerrar sesión</a></li>
@@ -44,60 +43,53 @@ include 'conexionProducto.php';
             <div class="div_filtro">
                 <h2>Filtro por Categoría</h2>
                 <label>
-                    <input type="checkbox" value="jean" class="filter" /> Jean
+                    <input type="checkbox" value="jeanh" class="filter" /> Jean
                 </label>
                 <label>
-                    <input type="checkbox" value="camisa" class="filter" /> Camisa
+                    <input type="checkbox" value="camisah" class="filter" /> Camisa
                 </label>
                 <label>
-                    <input type="checkbox" value="gaban" class="filter" /> Gaban
+                    <input type="checkbox" value="chaquetah" class="filter" /> Chaqueta
                 </label>
                 <label>
-                    <input type="checkbox" value="falda" class="filter" /> Falda
+                    <input type="checkbox" value="camisetah" class="filter" /> Camiseta
                 </label>
                 <label>
-                    <input type="checkbox" value="pantalon" class="filter" /> Pantalón
+                    <input type="checkbox" value="pantalonh" class="filter" /> Pantalón
+                </label>
+                <label>
+                    <input type="checkbox" value="buzoh" class="filter" /> Buzo
                 </label>
             </div>
             <div class="div_img">
-                <?php 
-                $productosArray=array();
-                if($consulta->num_rows>0){
-                    while($row=$consulta->fetch_assoc()){
-                        $productosArray[]=$row;
-                    }
-                }
-
-                ?>
-                <div class="div_item" data-categoria="jean">
-                    <img src="./images/mujer_1.png" alt="">
-                    <p>Jean</p>
-                    <p>$79.000</p>
+                <div class="div_item" data-categoria="chaquetah">
+                    <img src="./images/chaqueta_h.jpg" alt="">
+                    <p>Chaqueta</p>
+                    <p>$320.000</p>
                 </div>
-                <div class="div_item" data-categoria="jean">
-                    <img src="./images/mujer_2.png" alt="">
-                    <p>Jean tiro medio</p>
-                    <p>$120.000</p>
-                    <button class="ag_carrito" name="btnAccion" value="Agregar" type="submit">Añadir al carrito</button>
-                </div>
-                <div class="div_item" data-categoria="camisa">
-                    <img src="./images/mujer_3.png" alt="">
+                <div class="div_item" data-categoria="camisah">
+                    <img src="./images/camisa_h.webp" alt="">
                     <p>Camisa</p>
-                    <p>$90.000</p>
+                    <p>$99.000</p>
                 </div>
-                <div class="div_item" data-categoria="gaban">
-                    <img src="./images/mujer_4.png" alt="">
-                    <p>Gaban</p>
-                    <p>$279.000</p>
+                <div class="div_item" data-categoria="pantalonh">
+                    <img src="./images/pantalon_h.jpg" alt="">
+                    <p>Pantalon</p>
+                    <p>$190.000</p>
                 </div>
-                <div class="div_item" data-categoria="pantalon">
-                    <img src="./images/mujer_5.png" alt="">
-                    <p>Pantalón</p>
-                    <p>$310.000</p>
+                <div class="div_item" data-categoria="buzoh">
+                    <img src="./images/buzo_h.jpg" alt="">
+                    <p>Buzo</p>
+                    <p>$110.000</p>
                 </div>
-                <div class="div_item" data-categoria="falda">
-                    <img src="./images/mujer_6.png" alt="">
-                    <p>Falda</p>
+                <div class="div_item" data-categoria="jeanh">
+                    <img src="./images/jean_h.jpg" alt="">
+                    <p>Jean</p>
+                    <p>$130.000</p>
+                </div>
+                <div class="div_item" data-categoria="camisetah">
+                    <img src="./images/camiseta_h.webp" alt="">
+                    <p>Camiseta</p>
                     <p>$89.000</p>
                 </div>
             </div>
@@ -127,7 +119,6 @@ include 'conexionProducto.php';
 
     </footer>
     <script src="operaciones.js"></script>
-    <script src="operaciones2.js"></script>
 </body>
 
 </html>

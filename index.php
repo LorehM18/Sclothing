@@ -13,20 +13,19 @@ session_start(); // Iniciar la sesión
 </head>
 
 <body>
-    <script src="operaciones.js"></script>
+    
     <header>
         <nav class="nav_uno">
             <ul>
-                <li>SCLOTHING</li>
+                <li><form action="/buscar"><a href="./index.php">SCLOTHING</a></form></li>
                 <li><a href="./mujer.php">MUJER</a></li>
-                <li>HOMBRE</li>
+                <li><a href="./hombre.php">HOMBRE</a></li>
                 <li>OFERTAS</li>
             </ul>
         </nav>
         <nav class="nav_dos">
             <ul>
-                <li><input type="text" placeholder="Buscar" class="input_nav2"></li>
-                <!--<li><a href="./inicio_sesion.php">Iniciar sesión</a></li>-->
+                <li><input type="text" placeholder="Buscar" class="input_nav2" id="buscador"></li>               
                 <li><a href="#">Carrito</a></li>
                 <?php if (isset($_SESSION['username'])): ?>
                 <li>Bienvenido, <?php echo htmlspecialchars($_SESSION['username']); ?>!</li>
@@ -118,6 +117,7 @@ session_start(); // Iniciar la sesión
         </div>
         
     </footer>
+    <script src="operaciones2.js"></script>
 </body>
 
 </html>

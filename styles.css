@@ -2,45 +2,42 @@
 body{
     margin: 0;
 }
-ul{
-    list-style-type: none;
-}
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav_uno li{
-    float: left;
-    width: 7em;
-    text-decoration: none;
-   
-}
-
-.nav_dos {
-    display: flex;
-    align-items: center;
-}
-
-.nav_dos li{
-    list-style: none;
-    margin-right: 1em;
-   
-}
-
-.nav_dos a{
-    
-    color: black;
     text-decoration: none;
     
 }
 
-.input_nav2{
+nav ul{
+    list-style-type: none;   
+    display: flex; 
+    gap: 2em;
+}
+
+.nav_uno,
+.nav_dos {     
+    display: flex;  
+    gap: 1em; 
+    padding: 0;  
+}
+
+.nav_dos{
+    margin-right: 5em;
+}
+
+
+input{
+    width: 130px;
+}
+
+
+/*.input_nav2{
     width: 90px;    
     margin-right: 1em;
-}
+}*/
 
 .carrusel{
     height: 400px;
@@ -236,7 +233,7 @@ img{
 }
 
 .form-outline {
-    flex: 10; /* Permite que cada input ocupe el mismo espacio */
+    flex: 10; 
     justify-content: center;
 }
 
@@ -252,5 +249,9 @@ img{
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 
+}
+
+.ag_carrito{
+    margin-bottom: 10px;    
 }
 
