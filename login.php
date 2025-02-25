@@ -2,18 +2,23 @@
 include 'conexion.php'; // Conectar a la base de datos
 session_start(); // Iniciar sesión
 
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    //var_dump($_POST);
     // Obtener los datos del formulario
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = trim($_POST['password']);
 
     // Usar una consulta preparada para evitar inyecciones SQL
-    $stmt = $conn->prepare("SELECT * FROM datos_usuarios WHERE username = ?");
+    $stmt = $conn->prepare("SELECT username, password FROM datos_usuarios WHERE username =?");
     $stmt->bind_param("s", $username); // El "s" indica que el parámetro es una cadena
     $stmt->execute();
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
+    
     // Verificar si el usuario existe y la contraseña es correcta
     if ($user && password_verify($password, $user['password'])) {
         // Guardar el usuario en la sesión

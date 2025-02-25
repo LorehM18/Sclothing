@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Encriptar la contraseña
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    echo $password_hash;  // Muestra el hash generado
+
 
     // Usar consultas preparadas para evitar inyección SQL
     $sql = "INSERT INTO datos_usuarios (username, password, nombre, apellido, correo, fecha_nacimiento) 

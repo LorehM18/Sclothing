@@ -8,6 +8,8 @@ filters.forEach(filter => {
             .filter(f => f.checked)
             .map(f => f.value);
 
+        console.log('Filtros seleccionados:', selectedFilters);  
+
         productos.forEach(producto => {
             if (selectedFilters.length === 0 || selectedFilters.includes(producto.dataset.categoria)) {
                 producto.style.display = '';

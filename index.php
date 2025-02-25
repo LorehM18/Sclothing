@@ -20,13 +20,13 @@ session_start(); // Iniciar la sesión
                 <li><form action="/buscar"><a href="./index.php">SCLOTHING</a></form></li>
                 <li><a href="./mujer.php">MUJER</a></li>
                 <li><a href="./hombre.php">HOMBRE</a></li>
-                <li>OFERTAS</li>
+                <li><a href="./ofertas.php">OFERTAS</a></li>
             </ul>
         </nav>
         <nav class="nav_dos">
             <ul>
                 <li><input type="text" placeholder="Buscar" class="input_nav2" id="buscador"></li>               
-                <li><a href="#">Carrito</a></li>
+                <li><a href="./mostrar_carrito.php">Carrito</a></li>
                 <?php if (isset($_SESSION['username'])): ?>
                 <li>Bienvenido, <?php echo htmlspecialchars($_SESSION['username']); ?>!</li>
                 <li><a href="cerrar_sesion.php">Cerrar sesión</a></li>
@@ -42,7 +42,7 @@ session_start(); // Iniciar la sesión
         <div class="carrusel">
             <div class="container" id="c1">
                 <div class="img_1">
-                    <img src="./images/chaqueta.webp" alt="">
+                    <img src="./images/oferta_1.jpg" alt="">
                 </div>
                 <div class="flechas1">
                     <a href="#c3"><i class="fa-solid fa-chevron-left"></i></a>
@@ -51,7 +51,7 @@ session_start(); // Iniciar la sesión
             </div>
             <div class="container" id="c2">
                 <div class="img_2">
-                    <img src="./images/chaqueta.2.jfif" alt="">
+                    <img src="./images/oferta_2.jpg" alt="">
                 </div>
                 <div class="flechas2">
                     <a href="#c1"><i class="fa-solid fa-chevron-left"></i></a>
@@ -60,7 +60,7 @@ session_start(); // Iniciar la sesión
             </div>
             <div class="container" id="c3">
                 <div class="img_3">
-                    <img src="./images/chaqueta3.webp" alt="">
+                    <img src="./images/oferta_3.jpg" alt="">
                 </div>
                 <div class="flechas3">
                     <a href="#c2"><i class="fa-solid fa-chevron-left"></i></a>
@@ -69,17 +69,17 @@ session_start(); // Iniciar la sesión
             </div>
         </div>
 
-        <div class="aviso1">Nueva colección</div>
+        <div class="aviso1">Ofertas</div>
 
         <div class="container2">
             <div class="container_link">
-                <a href="mujer.html">Mujer</a>
+                <a href="mujer.php">Mujer</a>
             </div>
             <div class="container_link2">
-                <a href="ejemplos.html">Hombre</a>
+                <a href="hombre.php">Hombre</a>
             </div>
             <div class="container_link3">
-                <a href="ejemplos.html">Ofertas</a>
+                <a href="ofertas.php">Ofertas</a>
             </div>
 
 

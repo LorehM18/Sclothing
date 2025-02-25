@@ -1,4 +1,6 @@
 <?php
+define("KEY","security12345678");
+define("COD","AES-128-ECB");
 $servername = "localhost";
 $username = "root"; 
 $password = ""; 

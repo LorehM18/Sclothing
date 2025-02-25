@@ -1,10 +1,14 @@
 <?php
-session_start(); // Iniciar la sesión
+//session_start(); // Iniciar la sesión
+include 'headerp.php';
+include 'conexionProducto.php';
+include 'carrito.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!--<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
@@ -37,32 +41,68 @@ session_start(); // Iniciar la sesión
             </ul>
         </nav>
 
-    </header>
+    </header>-->
     <section>
         <div class="seccion_m">
             <div class="div_filtro">
                 <h2>Filtro por Categoría</h2>
                 <label>
-                    <input type="checkbox" value="jeanh" class="filter" /> Jean
+                    <input type="checkbox" value="jean_h" class="filter" /> Jean
                 </label>
                 <label>
-                    <input type="checkbox" value="camisah" class="filter" /> Camisa
+                    <input type="checkbox" value="camisa_h" class="filter" /> Camisa
                 </label>
                 <label>
-                    <input type="checkbox" value="chaquetah" class="filter" /> Chaqueta
+                    <input type="checkbox" value="chaqueta_h" class="filter" /> Chaqueta
                 </label>
                 <label>
-                    <input type="checkbox" value="camisetah" class="filter" /> Camiseta
+                    <input type="checkbox" value="camiseta_h" class="filter" /> Camiseta
                 </label>
                 <label>
-                    <input type="checkbox" value="pantalonh" class="filter" /> Pantalón
+                    <input type="checkbox" value="pantalon_h" class="filter" /> Pantalón
                 </label>
                 <label>
-                    <input type="checkbox" value="buzoh" class="filter" /> Buzo
+                    <input type="checkbox" value="buzo" class="filter" /> Buzo
                 </label>
             </div>
             <div class="div_img">
-                <div class="div_item" data-categoria="chaquetah">
+            <?php 
+                $productosArray=array();
+                if($consulta->num_rows>0){
+                    while($row=$consulta->fetch_assoc()){
+                        $productosArray[]=$row;
+                    }
+                    
+                }
+                $productosHombre = []; 
+                foreach ($productosArray as $producto) {
+                   if ($producto['categoria'] == 'hombre') {
+                    $productosHombre[] = $producto;  
+                   }
+                }
+
+                ?>
+                <?php //foreach($productosMujer as $product): ?>
+                    <?php foreach($productosHombre as $index => $product): ?>
+    <div class="div_item" data-categoria="<?php echo $product['nombre']; ?>"> 
+        <img src="./images/<?php echo strtolower($product['categoria']) . '_'.($index+1).'.jpg'; ?>" alt=""> 
+        <p><?php echo $product['nombre_producto']; ?></p> 
+        <p><?php echo '$' . number_format($product['precio'], 0, ',', '.'); ?></p> 
+        <form action="" method="post">
+            <input type="hidden" name="id" id="id" value="<?php echo $product['id_producto']; ?>">
+            <input type="hidden" name="nombre" id="nombre" value="<?php echo $product['nombre']; ?>">
+            <input type="hidden" name="precio" id="precio" value="<?php echo $product['precio']; ?>">
+            <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1; ?>">
+        <button class="ag_carrito" name="btnAccion" value="Agregar" type="submit">Añadir al carrito</button>
+        </form>        
+        
+    </div>
+
+
+        
+
+
+               <!-- <div class="div_item" data-categoria="chaquetah">
                     <img src="./images/chaqueta_h.jpg" alt="">
                     <p>Chaqueta</p>
                     <p>$320.000</p>
@@ -91,7 +131,8 @@ session_start(); // Iniciar la sesión
                     <img src="./images/camiseta_h.webp" alt="">
                     <p>Camiseta</p>
                     <p>$89.000</p>
-                </div>
+                </div>-->
+                <?php endforeach; ?>
             </div>
         </div>
     </section>

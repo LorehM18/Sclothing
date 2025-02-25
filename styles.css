@@ -60,7 +60,7 @@ a{
 
 img{
     height: 400px;
-    width: 20%;
+    width: 400px;
     align-items: center;
 }
 
@@ -120,7 +120,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(./images/sweater1.jpeg);
+    background: url(./images/oferta_4.jpg);
     background-size: cover;
     background-position:center ;
     width: 20%;
@@ -139,7 +139,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(./images/sweater2.jpg);
+    background: url(./images/oferta_6.jpg);
     background-size: cover;
     background-position:center ;
     width: 20%;
@@ -157,7 +157,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(./images/ofertas.jpg);
+    background: url(./images/oferta_5.jpg);
     background-size: cover;
     background-position:center ;
     width: 20%;
@@ -255,3 +255,40 @@ img{
     margin-bottom: 10px;    
 }
 
+.div_cofertas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+
+}
+
+.div_oferta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    
+    
+}
+
+.div_oferta img {
+    width: 100% ;     
+    height: 100%;    
+    object-fit: cover; 
+    
+}
+
+.table_carrito {
+    width: 60%;
+    margin: auto;
+}
+
+.table_carrito th,td {
+    width: 25%;
+    text-align: center;
+    border-bottom:1px solid #000;
+
+}
