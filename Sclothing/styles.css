@@ -1,0 +1,294 @@
+
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+nav ul{
+    list-style-type: none;   
+    display: flex; 
+    gap: 2em;
+}
+
+.nav_uno,
+.nav_dos {     
+    display: flex;  
+    gap: 1em; 
+    padding: 0;  
+}
+
+.nav_dos{
+    margin-right: 5em;
+}
+
+
+input{
+    width: 130px;
+}
+
+
+/*.input_nav2{
+    width: 90px;    
+    margin-right: 1em;
+}*/
+
+.carrusel{
+    height: 400px;
+    overflow: hidden;
+    
+    text-align: center;
+    position: relative;
+   
+}
+.container{
+   
+    border: 0;
+    padding: 0%;
+    position: relative;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    height: 400px;
+    width: 400px;
+    align-items: center;
+}
+
+.flechas2,.flechas1,.flechas3{
+    font-size: 2em;
+    position: absolute;   
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+   
+}
+
+.aviso1{
+    text-align: center;
+    font-size: 24px;
+    margin: 40px;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.container2 img{
+    height: 100%;
+    
+} 
+.container_link{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_link a{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(155, 61, 61);
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la visibilidad del texto */
+    /*padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+   
+}*/
+
+.container_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/oferta_4.jpg);
+    background-size: cover;
+    background-position:center ;
+    width: 20%;
+    height: 300px;
+    padding-top: 50px;
+    
+    
+}
+
+.container_link a{
+    color: #fff;
+}
+
+
+.container_link2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/oferta_6.jpg);
+    background-size: cover;
+    background-position:center ;
+    width: 20%;
+    height: 300px;
+    padding-top: 50px;
+    
+    
+}
+
+.container_link2 a{
+    color: #fff;
+}
+
+.container_link3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/oferta_5.jpg);
+    background-size: cover;
+    background-position:center ;
+    width: 20%;
+    height: 300px;
+    padding-top: 50px;
+    
+    
+}
+
+.container_link3 a{
+    color: #fff;
+}
+
+.conte_foot1{
+    text-align: center;
+}
+
+.conte_foot2{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.seccion_m{
+    display: flex;    
+}
+
+.div_filtro{
+    width: 20%;
+}
+
+.div_img{
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.div_img img{
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    justify-content: center;
+}
+
+.div_item{
+    width: calc(33.333% - 10px);
+    box-sizing: border-box ;
+    text-align: center;
+    border: 1px solid #141414; 
+}
+
+/* INICIO DE SESION*/
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px;
+    
+}
+
+/* registro*/
+
+.d-flex{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.form-outline {
+    flex: 10; 
+    justify-content: center;
+}
+
+.col-md-10{
+    justify-content: center;
+}
+
+.mx-1{
+    max-width: 500px; 
+    width: 100%; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+}
+
+.ag_carrito{
+    margin-bottom: 10px;    
+}
+
+.div_cofertas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+
+}
+
+.div_oferta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    
+    
+}
+
+.div_oferta img {
+    width: 100% ;     
+    height: 100%;    
+    object-fit: cover; 
+    
+}
+
+.table_carrito {
+    width: 60%;
+    margin: auto;
+}
+
+.table_carrito th,td {
+    width: 25%;
+    text-align: center;
+    border-bottom:1px solid #000;
+
+}
